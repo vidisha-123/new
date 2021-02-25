@@ -1,0 +1,653 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=0.9, maximum-scale=0.9"/>
+
+    <link rel="icon" href="favicon (1).ico" >
+    <title>Paysafe</title>
+    <style>
+
+       *{
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+        }
+       body{
+	overflow: scroll;
+	height:100%;
+	width:100%;
+        }
+        /*ul,nav{
+	list-style: none;
+        }
+        */
+       .left a{
+		position:relative;
+	}
+       a{
+		text-decoration: none;
+                cursor:pointer;
+		color:black;
+		padding: 4px 1px;
+		box-sizing: border-box;
+        }
+       a:hover,.active a{
+		background-color:#0278ae;
+	}
+       /*header{
+	    position:absolute;
+	    top:0;
+	   left:0;
+	   z-index:10;
+	   width:100%;
+	   display: -webkit-flex;
+	   display: -moz-flex;
+	   display: -ms-flex;
+	   display: -o-flex;
+	   display: flex;
+	   justify-content:space-between;
+	   align-items: center;
+	   padding: 35px 100px;
+	   box-sizing: border-box;
+	   height:34%;
+        }
+        header nav{
+	   display: -webkit-flex;
+	   display: -moz-flex;
+	   display: -ms-flex;
+	   display: -o-flex;
+	   display: flex;
+	   margin-bottom: auto;
+         }
+
+        header nav li{
+	   margin: 0 11px;
+	   font-size: 19px;
+
+         }
+         header nav li:first-child{
+	   margin-left: 0;
+         }
+        header nav li:last-child{
+	   margin-right: 0;
+         }
+        header #image1{
+	   position: relative;
+	   height: 100%;
+	   width: 14%;
+        }
+        */
+        .banner-text{
+ 	   position:absolute;
+	   width:100%;
+	   height: 100px;
+	   margin: 18% 0;
+	   text-align: center;
+         }
+        .banner-text div{
+	   display: -webkit-flex;
+	   display: -moz-flex;
+	   display: -ms-flex;
+	   display: -o-flex;
+	   display: flex;
+	   flex-direction: column;
+	   align-items:center;
+	   text-align: center;
+         }
+        .banner-text h1{
+	    text-transform: uppercase;
+	    font-size: 70px;
+	    color:#0278ae;
+	    margin-left: 0;
+         }
+        .banner-text h1 span{
+	    color:#312c51;
+         }
+        .banner-text p{
+	   color: black;
+	   font-size: 20px;
+	   line-height: 1.9;
+           text-align: center;
+	   margin-bottom: 35px;
+	   padding: 0 20px;
+	   box-sizing: border-box;
+        }
+        #image2{
+	   margin-top:0;
+	   margin-left:30%;
+	   height: 100%;
+	   width: 70%;
+        }
+        @media screen and (min-width:1000px) and (max-width:1028px){
+                header{
+		    padding:35px 75px 35px 75px;
+		}
+		header #image1{
+			width:119px;
+			height:132px;
+		}
+		/*header nav li{
+			margin:0 5px;
+			font-size: 19px;
+		}
+        */
+		.banner-text{
+			margin: 23% 0;
+		}
+		.banner-text h1{
+			font-size: 65px;
+		}
+		.banner-text p{
+			font-size: 20px;
+			margin-bottom: 28px;
+			width: 1000px;
+		}
+}
+	@media screen and (min-width:550px) and (max-width:855px){
+                header{
+			flex-direction: column;
+		}
+		header #image1{
+			width:120px;
+			height: 130px;
+			margin-bottom: 22px;
+		}
+		/*header nav li{
+			margin: 0 10px;
+			font-size: 21px;
+
+		}
+        */
+		.banner-text{
+			margin:30% 0;
+			}
+		.banner-text h1{
+			font-size: 58px;
+		}
+		.banner-text p{
+			font-size: 19px;
+			margin-bottom: 27px;
+			width:100%;
+		}
+	}
+	@media screen and (min-width:421px) and (max-width:428px){
+                  header{
+			 flex-direction: column;
+		 }
+		 header #image1{
+			 width:115px;
+			 height: 125px;
+			 margin-bottom:22px;
+		 }
+		 /*header nav li{
+			 margin: 0 6px;
+			 font-size:16px;
+		 }*/
+		 .banner-text{
+			 margin: 55% 0;
+		 }
+		 .banner-text h1{
+			 font-size: 50px;
+		 }
+		 .banner-text p{
+	 			font-size: 17px;
+	 			margin-bottom: 24px;
+		 }
+	  }
+         @media screen and (min-width:328px) and (max-width:378px){
+		header{
+			flex-direction: column;
+		}
+		header #image1{
+			width: 115px;
+			height: 125px;
+			margin-bottom: 22px;
+		}
+		/*header nav li{
+			margin: 0 5px;
+			font-size: 14px;
+		}*/
+		.banner-text{
+			margin: 65% 0;
+		}
+		.banner-text h1{
+			font-size: 40px;
+		}
+		.banner-text p{
+			font-size: 18px;
+			margin-bottom: 20px;
+			padding: 0 20px;
+			box-sizing: border-box;
+                 }
+          }
+	 @media screen and (min-width:278px) and (max-width:324px){
+		header{
+			flex-direction:column;
+  	        }
+		header #image1{
+			width:100px;
+			height: 120px;
+			margin-bottom:19px;
+		}
+		/*header nav li{
+			margin: 0 3px;
+			font-size: 12.5px;
+		}*/
+		.banner-text{
+                        text-align: center;
+			align-items: center;
+			width:100%;
+			margin:70% 0;
+		}
+		.banner-text  h1{
+			font-size:40px;
+  	        }
+		.banner-text p{
+                        font-size: 18px;
+			margin-bottom:25px;
+                        padding:0 10px;
+		}
+	 }
+          /* ABOUT*/
+         .about-area{
+	       background-color: #f8f1f1;
+	       position: absolute;
+	       height:100%;
+	       top:100%;
+	       width: 100%;
+            }
+          .section{
+	       display: -webkit-flex;
+	       display: -moz-flex;
+	       display: -ms-flex;
+	       display: -o-flex;
+	       display: flex;
+	       flex-direction: column;
+	    }
+          ul.about-content{
+	       width:100%;
+	       display: -webkit-flex;
+	       display: -moz-flex;
+	       display: -ms-flex;
+	       display: -o-flex;
+	       display: flex;
+	       flex-wrap:wrap;
+	       justify-content: center;
+           }
+         .about-content li{
+	      padding: 25px;
+	      height: 410px;
+	      box-sizing: border-box;
+	      background-clip:content-box;
+	      -webkit-background-size:cover;
+	      background-size: cover;
+	      background-position: center;
+	     }
+	 .about-left{
+		flex-basis:33%;
+		background-image:url(paysafe1.jpg);
+	   }
+	 .about-right{
+		flex-basis:60%;
+	   }
+	 .about-area p{
+		max-width:850px;
+		margin-bottom: 30px;
+		line-height:1.5;
+		text-align:left;
+		padding-left: 3%;
+	  }
+	 .div-title{
+		text-transform:uppercase;
+		font-size: 50px;
+		margin-bottom: 5%;
+		text-align: center;
+	  }
+	 .about-right h2{
+		margin:0 3% 3%;
+	  }
+         @media screen and (min-width:1000px) and (max-width: 1024px){
+	   .about-left{
+		 flex-basis: 35%;
+	    }
+	   .about-right{
+		flex-basis: 60%;
+	    }
+	   .about-content li{
+		padding: 15px;
+		height: 400px;
+	    }
+         }
+        @media screen and (min-width:550px) and (max-width: 778px){
+	   .about-right{
+		flex-basis: 55%
+	   }
+	   .about-left{
+		flex-basis:45%;
+	   }
+	   .about-content li{
+		padding: 15px;
+		height:400px;
+	   }
+         }
+        @media screen and (min-width: 278px) and (max-width: 420px) {
+	    .about-right,.about-left{
+		 flex-basis: 100%;
+	    }
+	    .about-content li{
+		 padding:8px 20px;
+	         height:230px;
+	    }
+	    .about-area p{
+		 max-width: 300px;
+		 margin-bottom: 8px;
+		 line-height:1;
+		 padding-left: 3%;
+	    }
+	    .div-title{
+		 font-size: 35px;
+		 margin-bottom: 2%;
+	    }
+	    .about-right h2{
+		 font-size: 25px;
+		 margin: 0 3% 2%;
+	    }
+         }
+        @media screen and (min-width: 421px) and (max-width: 428px) {
+
+	    .about-left,.about-right{
+		flex-basis: 100%;
+	     }
+	    .about-content li{
+		padding: 4px 30px;
+		height: 240px;
+	     }
+	    .div-title{
+		font-size: 30px;
+		margin-bottom: 2%;
+	     }
+	    .about-area p{
+		max-width:421px;
+		margin-bottom: 9px;
+		line-height:1.3;
+	     }
+	    .about-right h2{
+		font-size: 24px;
+		margin: 0  3% 2%;
+	     }
+          }
+
+        /* LOGIN AND REGISTRATION */
+        .hero{
+
+	   height: 100%;
+	   width: 100%;
+	   background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+	   background-position: center;
+	   background-size: cover;
+	   position: absolute;
+         }
+        .img{
+	   background-image: url("pay.jpg");
+	   -webkit-background-size:cover;
+	   background-size: cover;
+	   background-position: center center;
+	   z-index: -1;
+	   width: 100%;
+	   height:100%;
+	   position: absolute;
+	   left:0;
+	   right:0;
+         }
+        .img2{
+	  -webkit-filter:blur(8px);
+	  -moz-filter:blur(8px);
+	  filter: blur(8px);
+         }
+
+        .form-box{
+	  width: 390px;
+	  height: 520px;
+	  position: absolute;
+	  top:46%;
+	  left:50%;
+	  transform: translate(-50%,-50%);
+	  margin: 6% auto;
+	  background: rgba(0,0,0,0.5);
+	  overflow: hidden;
+	  padding: 5px;
+	  z-index: 2;
+          overflow: hidden;
+         }
+        .button-box{
+	   width: 230px;
+	   margin: 35px auto;
+	   position: relative;
+	   box-shadow: 0 0 20px 9px #ff61241f;
+	   border-radius: 30px;
+          }
+        .toggle-btn{
+	    padding: 20px 30px;
+	    cursor: pointer;
+	    background: transparent;
+	    border: 0;
+	    outline: none;
+	    position: relative;
+         }
+         #btn{
+	    top: 0;
+	    left: 0;
+	    position: absolute;
+	    width: 120px;
+	    height: 100%;
+	    background: linear-gradient(to right,#312c51,#0278ae);
+	    border-radius: 30px;
+	    transition: .5s;
+         }
+        .social-icons{
+	   margin :30px auto;
+	   text-align: center;
+         }
+        .social-icons img{
+	  width: 30px;
+	  margin: 0 12px;
+	  box-shadow: 0 0 20px 0 #7f7f7f3d;
+	  cursor: pointer;
+	  border-radius: 50%;
+         }
+        .input-group{
+	   top:145px;
+	   position: absolute;
+	   width: 280px;
+           transition: .5s;
+         }
+         .input-field{
+	   width: 100%;
+	   padding: 10px 0;
+           margin: 13px 0;
+           border-left: 0;
+           border-top: 0;
+           border-right: 0;
+           border-bottom: 1px solid #999;
+          outline: none;
+          background: transparent;
+        }
+        .submit-btn{
+          width: 85%;
+          padding: 10px 30px;
+          cursor: pointer;
+          display: block;
+          margin: 10px auto 0;
+          background: linear-gradient(to right,#312c51,#0278ae);
+          border: 0;
+          outline: none;
+          border-radius: 0;
+         }
+         .check-box{
+             margin:15px 10px 15px 0;
+          }
+         #login{
+       	     left: 13%;
+          }
+         #signup{
+	     left: 125%;
+          }
+         @media screen and (min-width: 1000px) and (max-width: 1090px){
+	     .form-box{
+		 height: 430px;
+	      }
+	     header #image1{
+		 height: 85%;
+	      }
+          }
+         @media screen and (min-width: 280px) and (max-width:700px){
+	     header{
+		flex-direction: column;
+	     }
+	     header #image1{
+		width: 115px;
+		height: 125px;
+		margin-bottom: 22px;
+	     }
+	    /*header nav li{
+		margin: 0 5px;
+		font-size: 14px;
+	     }
+	    */
+	     .form-box {
+		top: 60%;
+		height: 370px;
+	        width: 280px;
+		overflow: hidden;
+	     }
+	     .input-group{
+	  	top: 130px;
+		width:245px;
+	     }
+	     #left{
+		left:9%;
+	     }
+	    .input-field{
+		width: 90%;
+	     }
+	    .submit-btn{
+	 	width: 80%;
+		margin: 10px 12px 0;
+	     }
+          }
+         @media screen and (min-width: 550px) and (max-width: 855px) {
+           .form-box {
+              top: 51%;
+	   }
+         }
+         .input-group>:not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+         margin-left: -1px;
+         border-top-left-radius: 30;
+         border-bottom-left-radius: 30;
+       }
+     </style>
+ </head>
+ <body>
+    <div class="hero">
+      <div class="img img2"></div>
+      <nav  style="height:60px" class="navbar navbar-expand-lg navbar-dark bg-dark">
+                  <div class="container-fluid">
+                    <a class="navbar-brand" href="#">Navbar</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                          <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="home.html#about">About</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Dropdown
+                          </a>
+                          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                          </ul>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                        </li>
+                      </ul>
+                      <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                      </form>
+                    </div>
+                  </div>
+      </nav>
+      <div class="alert alert-primary" role="alert" style="height:50px">
+        A simple primary alert—check it out!
+      </div>
+      <div class="form-box">
+        <div class="button-box">
+        		<div id="btn"></div>
+        		<button type="button" class="toggle-btn" onclick="login()">Log In</button>
+        		<button type="button" class="toggle-btn" onclick="signup()">Sign Up</button>
+        </div>
+        <form  action="/handlelogin" method='post' id="login" class="input-group">{% csrf_token %}
+
+            <input type="text" name="login-id" class="input-field" placeholder="User Id" required>
+            <input type="password" name="password" class="input-field" placeholder="Enter Password" required>
+
+            <button type="submit" class="submit-btn">Log In</button>
+         </form >
+         <form   action='/make' method='post'  id="signup" class="input-group" >  {% csrf_token %}
+            <input  type="text"  name="unm" id="unm" class="input-field" placeholder="User Id" required>
+
+            <input type="email" name="emailId" id="emailId" class="input-field" placeholder="Email Id" required>
+
+            <input type="password" name="register-password" id="register-password" class="input-field" placeholder="Enter Password" required>
+
+            <input type="password" name="register-confirmpassword" class="input-field" placeholder="Confirm Password" required>
+
+
+            <button type="submit" class="submit-btn">Sign Up</button>
+         </form>
+      </div>
+    </div>
+    <script>
+    var x=document.getElementById("login");
+    var y=document.getElementById("signup");
+    var z=document.getElementById("btn");
+    function signup() {
+    	x.style.left = "-88%";
+    	y.style.left = "13%";
+    	z.style.left = "110px";
+        }
+    function login() {
+    	x.style.left = "13%";
+    	y.style.left = "125%";
+    	z.style.left = "0px";
+        }
+    </script>
+<!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+    -->
+
+
+</body>
+</html>
